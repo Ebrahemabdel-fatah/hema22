@@ -1,0 +1,117 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Varela Round', sans-serif;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: montserrat, sans-serif;
+    }
+    
+     :root {
+        --maincolor: #6195ff;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    button {
+        font-family: montserrat, sans-serif;
+    }
+    
+    .hover-opacity {
+        transition: opacity 0.5s;
+    }
+    
+    .hover-opacity:hover {
+        opacity: 0.8;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .pd-y {
+        padding: 120px 0;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .section-header .section-title {
+        font-size: 32px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+    
+    .line {
+        background-color: var(--maincolor);
+        display: block;
+        width: 60px;
+        height: 5px;
+        margin: 0 auto 70px auto;
+    }
+    
+    .ltr-effect {
+        position: relative;
+    }
+    
+    .ltr-effect:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        background-color: #333;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -3;
+        transition: width 0.5s;
+    }
+    
+    .ltr-effect:hover:after {
+        width: 100%;
+    }
+    
+    .tb-effect {
+        position: relative;
+    }
+    
+    .tb-effect:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 0;
+        background-color: #333;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transition: height 0.5s;
+    }
+    
+    .tb-effect:hover:after {
+        height: 100%;
+    }
+    
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }

@@ -1,0 +1,93 @@
+/* header */
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header .logo {
+    width: 40%;
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .nav {
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav>li {
+    display: inline-block;
+    text-align: right;
+}
+
+.header .nav>li>a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    padding: 25px 13px;
+}
+
+.header .nav>li>a:after,
+.header .nav>li>a.active:after {
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 2px;
+    background-color: var(--maincolor);
+    transition: width 0.5s;
+}
+
+.header .nav>li>a:after {
+    width: 0%;
+}
+
+.header .nav>li>a.active:after {
+    width: 100%;
+}
+
+.header .nav>li>a:hover:after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dropdowm-menu {
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    background-color: var(--maincolor);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.dropdown:hover .dropdowm-menu {
+    opacity: 1;
+    visibility: visible
+}
